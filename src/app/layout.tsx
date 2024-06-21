@@ -14,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body dir="rtl">
+    <html lang="en" style={{ height: '100%' }}>
+      <body dir="rtl" style={{ height: '100%' }}>
         <Layout appSettings={mockSettings}
           currentUser={{
             image: null

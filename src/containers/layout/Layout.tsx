@@ -15,12 +15,14 @@ type Props = {
 
 export const Layout: FC<Props> = ({ appSettings, orderCount, children, currentUser }) => {
     return (
-        <div className='flex'>
+        <div className='flex h-full'>
             <LayoutSidebar />
-            <div className='w-full'>
-                <LayoutHeader appSettings={appSettings} orderCount={orderCount} currentUser={currentUser} />
-                <div>
-                    {children}
+            <div className='flex flex-col h-full justify-between w-full'>
+                <div className='w-full'>
+                    <LayoutHeader appSettings={appSettings} orderCount={orderCount} currentUser={currentUser} />
+                    <div>
+                        {children}
+                    </div>
                 </div>
                 <LayoutFooter appSettings={appSettings} />
             </div>
