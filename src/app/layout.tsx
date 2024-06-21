@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Layout } from "@/containers/layout/Layout";
+import { mockSettings } from "@/utils/mocks";
 
 export const metadata: Metadata = {
   title: "Bllucake",
@@ -13,7 +15,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body dir="rtl">{children}</body>
+      <body dir="rtl">
+        <Layout appSettings={mockSettings}
+          currentUser={{
+            image: null
+          }}
+          orderCount={4}
+        >
+          {children}
+        </Layout>
+      </body>
     </html>
   );
 }

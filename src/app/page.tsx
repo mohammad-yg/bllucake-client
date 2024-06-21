@@ -1,6 +1,8 @@
 export default function Home() {
   return (
-    <main className="">     
+    <main className="">
+      <div className="w-[700px] h-[400px] bg-slate-700">
+      </div>
     </main>
   );
 }
